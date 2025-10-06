@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import SimpleCompnent from './SimpleCompnent';
 import PureComp from './PureComponent';
+import FunctionComp from './FunctionComp';
+import Button from './ButtonComp';
 
 class ParentComponent extends Component {
 
@@ -13,17 +15,17 @@ class ParentComponent extends Component {
   }
 
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log("shouldComponentUpdate() decide TRUE");
-    // console.log(this.state.name)
-    // console.log(nextState)
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log("shouldComponentUpdate() decide TRUE");
+  //   // console.log(this.state.name)
+  //   // console.log(nextState)
 
 
-    // if (this.state.name !== nextState.name) {
-    //   return true
-    // }
-    return true
-  }
+  //   // if (this.state.name !== nextState.name) {
+  //   //   return true
+  //   // }
+  //   return true
+  // }
 
   changeToBulma = () => {
     this.setState({
@@ -37,9 +39,15 @@ class ParentComponent extends Component {
 
     return (
       <div>
+        <p>
+          <span className="blue">ParentComponent: </span>
+          {this.state.name}
+        </p>
+
         <SimpleCompnent name={this.state.name}/>
         <PureComp name={this.state.name}/>
-        <button onClick={this.changeToBulma}>Changer en Bulma</button>
+        <FunctionComp name={this.state.name}/>
+        <Button changeBulma={this.changeToBulma} />
       </div>
     )
   }

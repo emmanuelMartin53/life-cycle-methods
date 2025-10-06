@@ -70,6 +70,32 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
+
+.blue {
+  color: blue;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.green {
+  color: green;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.violet {
+  color: violet;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.purple {
+  color: purple;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 /* === Mode clair === */
 @media (prefers-color-scheme: light) {
   :root {
